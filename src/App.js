@@ -1,28 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Button, Image, View } from 'react-native';
+import { TextInput } from 'react-native-paper';
 
 class App extends Component {
+  state = {
+    firstName: '',
+    lastName: ''
+  };
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <View style={{ flex: 1 }}>
+        <Image
+          resizeMode="contain"
+          style={{ height: 80 }}
+          source={require('./react.png')}
+        />
+        {/* <img src={require('./react.png')} style={{height: 80, width: 300}} /> */ }
+        <TextInput
+          label="First Name"
+          placeholder="First Name"
+          value={this.state.firstName}
+          onChangeText={text => this.setState({ firstName: text })}
+        />
+        <TextInput
+          label="Last Name"
+          placeholder="Last Name"
+          value={this.state.lastName}
+          onChangeText={text => this.setState({ lastName: text })}
+        />
+        <Button title="test" />
+      </View>
     );
   }
 }
-
 export default App;

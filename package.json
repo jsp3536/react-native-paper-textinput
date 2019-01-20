@@ -1,20 +1,31 @@
 {
-  "name": "createreactappjeremy",
+  "name": "react-native-paper-textinput",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "npm": "^6.4.1",
+    "react": "16.5.1",
+    "react-native": "0.55.4",
+    "react-art": "16.5.1",
+    "react-dom": "^16.5.1",
+    "react-native-paper": "^2.5.0",
+    "react-native-web": "0.9.13",
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "devDependencies": {
+    "customize-cra": "^0.2.7",
+    "babel-jest": "23.6.0",
+    "babel-preset-react-native": "4.0.0",
+    "metro-react-native-babel-preset": "^0.50.0",
+    "jest": "23.6.0",
+    "react-app-rewired": "^1.6.2",
+    "react-test-renderer": "16.5.1"
   },
   "browserslist": [
     ">0.2%",
